@@ -5,6 +5,7 @@ import { ParamSetList } from "./components/ParamSetList";
 import { getVariables, replaceVariables } from "./storage";
 import { runCliCommand } from "./utils";
 
+// 文档： https://developers.raycast.com/
 export default function Command() {
   const [output, setOutput] = useState<string>();
   const [isLoading, setIsLoading] = useState(false);

@@ -64,6 +64,16 @@ export function ParamSetList({ command, onSelect }: ParamSetListProps) {
           }
         />
       ))}
+      <List.Item
+        title="Add Parameter Set"
+        icon={Icon.Plus}
+        actions={
+          <ActionPanel>
+            <Action.Push title="Add Parameter Set" target={<ParamSetForm command={command} onSave={loadParamSets} />} />
+            <Action.Push title="Manage Variables" target={<VariableList />} />
+          </ActionPanel>
+        }
+      />
     </List>
   );
 }

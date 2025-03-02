@@ -54,6 +54,16 @@ export function VariableList() {
           }
         />
       ))}
+
+      <List.Item
+        title="Add Variable"
+        icon={Icon.Plus}
+        actions={
+          <ActionPanel>
+            <Action.Push title="Add Variable" target={<VariableForm onSave={loadVariables} />} />
+          </ActionPanel>
+        }
+      />
     </List>
   );
 }
